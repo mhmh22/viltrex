@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
 import { Fragment } from "react";
 import { ArrowRight, ChevronRight, Sparkles, Brain, Cpu } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -12,11 +14,11 @@ const Hero = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7 text-center lg:text-left">
-            <div className="inline-flex items-center px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 text-blue-600 dark:text-blue-300 text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4 mr-2" />
+            <Badge variant="outline" className="px-4 py-2 rounded-full bg-blue-50 dark:bg-blue-900/30 border border-blue-100 dark:border-blue-800 text-blue-600 dark:text-blue-300 text-sm font-medium mb-6 flex items-center gap-2 justify-center lg:justify-start w-fit mx-auto lg:mx-0">
+              <Sparkles className="w-4 h-4" />
               Next-Generation AI Solutions
-              <ChevronRight className="w-4 h-4 ml-1" />
-            </div>
+              <ChevronRight className="w-4 h-4" />
+            </Badge>
             
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight mb-6">
               Transform Business Through{" "}
@@ -45,10 +47,10 @@ const Hero = () => {
                 className="text-lg font-medium h-14 px-8 rounded-full shadow-lg hover:shadow-xl transition-all group"
                 asChild
               >
-                <a href="#contact">
-                  Get Started
+                <Link to="/start-project">
+                  Start Your Project
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </a>
+                </Link>
               </Button>
               <Button
                 variant="outline"
@@ -58,41 +60,6 @@ const Hero = () => {
               >
                 <a href="#services">Explore Services</a>
               </Button>
-            </div>
-            
-            {/* Client logos */}
-            <div className="mt-16">
-              <p className="text-sm uppercase text-gray-500 dark:text-gray-400 font-medium mb-4">Trusted by innovative companies</p>
-              <div className="flex flex-wrap justify-center lg:justify-start gap-8 items-center opacity-70">
-                {['Google', 'Microsoft', 'Amazon', 'Tesla', 'IBM'].map((company) => (
-                  <span key={company} className="text-xl font-bold text-gray-900 dark:text-white">{company}</span>
-                ))}
-              </div>
-            </div>
-            
-            {/* Trust metrics */}
-            <div className="mt-16 grid grid-cols-3 gap-8">
-              <div className="text-center lg:text-left">
-                <div className="text-4xl font-bold text-gray-900 dark:text-white mb-1 flex items-center justify-center lg:justify-start">
-                  98%
-                  <span className="text-blue-500 text-xl ml-1">+</span>
-                </div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">Client Satisfaction</div>
-              </div>
-              <div className="text-center lg:text-left">
-                <div className="text-4xl font-bold text-gray-900 dark:text-white mb-1 flex items-center justify-center lg:justify-start">
-                  50
-                  <span className="text-blue-500 text-xl ml-1">+</span>
-                </div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">Enterprise Clients</div>
-              </div>
-              <div className="text-center lg:text-left">
-                <div className="text-4xl font-bold text-gray-900 dark:text-white mb-1 flex items-center justify-center lg:justify-start">
-                  10
-                  <span className="text-blue-500 text-xl ml-1">+</span>
-                </div>
-                <div className="text-sm text-gray-500 dark:text-gray-400">Years Experience</div>
-              </div>
             </div>
           </div>
           

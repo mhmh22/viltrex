@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
-import CaseStudies from './components/CaseStudies';
-import Contact from './components/Contact';
+import Process from './components/Process';
+import StartProject from './pages/StartProject';
+import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
 import { Sun, Moon } from 'lucide-react';
 import { Button } from './components/ui/button';
@@ -34,15 +36,25 @@ function App() {
 
   return (
     <div className="min-h-screen relative">
-      <Header />
-      <main>
-        <Hero />
-        <Services />
-        <About />
-        <CaseStudies />
-        <Contact />
-      </main>
-      <Footer />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <>
+              <Header />
+              <main>
+                <Hero />
+                <About />
+                <Services />
+                <Process />
+              </main>
+              <Footer />
+            </>
+          }
+        />
+        <Route path="/start-project" element={<StartProject />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
       
       {/* Theme toggle button */}
       <Button 

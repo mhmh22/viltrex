@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -40,7 +41,7 @@ const Header = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <h1 className="text-2xl font-bold">
-            <span className="gradient-text">VILTREX</span>
+            <Link to="/" className="gradient-text hover:opacity-90 transition-opacity">VILTREX</Link>
           </h1>
         </div>
         
@@ -87,7 +88,7 @@ const Header = () => {
                 className="ml-2" 
                 asChild
               >
-                <a href="#contact">Contact Us</a>
+                <Link to="/start-project">Start Your Project</Link>
               </Button>
             </NavigationMenuItem>
           </NavigationMenuList>
@@ -118,7 +119,7 @@ const Header = () => {
             <a href="#case-studies" className="px-6 py-3 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors">Case Studies</a>
             <div className="px-6 py-3">
               <Button className="w-full" asChild>
-                <a href="#contact">Contact Us</a>
+                <Link to="/start-project">Start Your Project</Link>
               </Button>
             </div>
           </div>

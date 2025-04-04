@@ -52,3 +52,100 @@ export default tseslint.config({
   },
 })
 ```
+
+# Viltrex
+
+A modern React application built with Vite, TypeScript, and TailwindCSS.
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18.x or later
+- npm 9.x or later
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/viltrex.git
+cd viltrex
+
+# Install dependencies
+npm install
+```
+
+### Development
+
+```bash
+# Start the development server
+npm run dev
+```
+
+### Building for Production
+
+```bash
+# Build the application
+npm run build
+
+# Preview the production build
+npm run preview
+```
+
+## 🌐 Deployment on Vercel
+
+This project is configured for seamless deployment on Vercel.
+
+### Manual Deployment
+
+1. Install the Vercel CLI:
+   ```bash
+   npm install -g vercel
+   ```
+
+2. Login to Vercel:
+   ```bash
+   vercel login
+   ```
+
+3. Deploy to preview:
+   ```bash
+   npm run vercel:preview
+   ```
+
+4. Deploy to production:
+   ```bash
+   npm run vercel:production
+   ```
+
+### Automatic Deployment with Git
+
+1. Connect your Git repository to Vercel through the [Vercel Dashboard](https://vercel.com/dashboard).
+2. Configure the following settings:
+   - Framework preset: Vite
+   - Build command: `npm run build`
+   - Output directory: `dist`
+   - Install command: `npm install`
+
+3. Set up environment variables in the Vercel dashboard if needed.
+
+## 📁 Project Structure
+
+```
+viltrex/
+├── public/          # Static assets
+├── src/
+│   ├── assets/      # Images, fonts, etc.
+│   ├── components/  # Reusable UI components
+│   ├── lib/         # Utility functions and hooks
+│   ├── pages/       # Page components
+│   ├── App.tsx      # Main application component
+│   └── main.tsx     # Application entry point
+├── .env.example     # Example environment variables
+├── vercel.json      # Vercel configuration
+└── vite.config.ts   # Vite configuration
+```
+
+## ⚙️ Environment Variables
+
+Copy `.env.example` to `.env.local` for local development and customize as needed. For production, set these in your Vercel project settings.
